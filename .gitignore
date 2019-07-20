@@ -1,0 +1,19 @@
+.project
+.settings
+.sfdx
+.vscode
+salesforce.schema
+Referenced Packages
+config/.debug
+config/.describe
+config/.lightning
+config/.local_store
+config/.org_metadata
+config/.org_connections
+config/.session
+.idea/illuminatedCloud.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+IlluminatedCloud/Timular_App_Dev_Org/OfflineSymbolTable.zip
+timular-app.iml
