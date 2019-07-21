@@ -1,0 +1,41 @@
+<!--
+ - Created by dantaedavies on 7/19/19.
+ -->
+
+<aura:component description="timularMapList" implements="flexipage:availableForAllPageTypes">
+    <!-- Attributes -->
+    <aura:attribute name="activityMappings" type="Object[]" access="private"/>
+
+    <!-- Event Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+
+    <!-- Component Markup -->
+    <lightning:card>
+        <aura:set attribute="title">
+            <lightning:icon iconName="standard:reward" size="small"/>
+            Timular Activity Mappings
+        </aura:set>
+    </lightning:card>
+
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+        <thead>
+            <tr class="slds-text-title--caps">
+                <th scope="col">Timular Activity</th>
+                <th scope="col">BBC Project</th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.activityMappings}" var="mapping">
+                <tr>
+                    <!--<th scope="row" data-label="Activity">{!mapping.ActivityName}</th>-->
+                    <td data-label="Timular Activity">{!mapping.ActivityName}</td>
+                    <td data-label="BBC Project">{!mapping.BBCProjectName}</td>
+                    <td>
+                        <lightning:button label="Delete" class="slds-container_center"/>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+
+</aura:component>
